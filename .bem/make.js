@@ -9,8 +9,19 @@ environ.extendMake(MAKE);
 
 MAKE.decl('Arch', {
 
-    blocksLevelsRegexp: /^.+?\.blocks/,
-    bundlesLevelsRegexp: /^.+?\.bundles$/,
+//    blocksLevelsRegexp: /^.+?\.blocks/,
+//    bundlesLevelsRegexp: /^.+?\.bundles$/,
+
+    getBundlesLevels: function() {
+
+        return [
+
+            'desktop.bundles',
+            'themes/theme1.bundles'
+
+        ];
+
+    },
 
     libraries: [
         'bem-core @ f4b46ef0590549042d938f7e981df4d14eb4caef',

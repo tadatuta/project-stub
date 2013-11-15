@@ -24,8 +24,11 @@ var UTIL = require('util'),
 var data = DB.getData();
 
 // читаем шаблоны
-var bemtreeTemplate = FS.readFileSync('./desktop.bundles/index/index.bemtree.js', 'utf-8'),
-    BEMHTML = require('./desktop.bundles/index/_index.bemhtml.js').BEMHTML;
+//var bemtreeTemplate = FS.readFileSync('./desktop.bundles/index/index.bemtree.js', 'utf-8'),
+//    BEMHTML = require('./desktop.bundles/index/_index.bemhtml.js').BEMHTML;
+
+var bemtreeTemplate = FS.readFileSync('./themes/theme1.bundles/index/index.bemtree.js', 'utf-8'),
+    BEMHTML = require('./themes/theme1.bundles/index/_index.bemhtml.js').BEMHTML;
 
 //console.log('bemtreeTemplate', bemtreeTemplate);
 
