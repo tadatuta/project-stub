@@ -1,27 +1,29 @@
-//this._mode === '' && !this.data: {
-//     // пробрасываем их в this, чтобы иметь возможность обращаться
-//     // к ним из вложенных шаблонов
-//
-//     return (function(glob) {
-//         var borschik = glob['borschik'] = {};
-//
-//         var links = {};
-//
-//         borschik.addLinks = function(json) {
-//             for (var link in json) {
-//                 links[link] = json[link];
-//             }
-//         };
-//
-//         borschik.link = function(link) {
-//             // link with "@" is dynamic
-//             if (link.charAt(0) === '@') {
-//                 return links[link.substr(1)];
-//             }
-//
-//             return link;
-//         };
-//
-//     })(this)
-//
-//}
+this._mode === '' && !this.borschik: {
+    // пробрасываем их в this, чтобы иметь возможность обращаться
+    // к ним из вложенных шаблонов
+
+    (function(glob) {
+        var borschik = glob['borschik'] = {};
+
+        var links = {};
+
+        borschik.addLinks = function(json) {
+            for (var link in json) {
+                links[link] = json[link];
+            }
+        };
+
+        borschik.link = function(link) {
+            // link with "@" is dynamic
+            if (link.charAt(0) === '@') {
+                return links[link.substr(1)];
+            }
+
+            return link;
+        };
+
+    })(this);
+
+    return applyNext();
+
+}

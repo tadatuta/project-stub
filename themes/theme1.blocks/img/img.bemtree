@@ -1,10 +1,11 @@
 block img, default:{
     var ctx = applyNext(),
-        data = this.data,
-        picDefault = 'img.png',
+        data = this.data;
 
-    ctx.imageUrl = borschik.link(picDefault);
-    console.log(borschik.link(picDefault));
+    // чтобы была возможность использовать переменные в качестве фриза,
+    // см. http://bem.info/articles/borschik/#dynamic-urls
+    ctx.imageUrl = borschik.link('img.png');
+    console.log(borschik.link('img.png'));
 
     return applyCtx(ctx);
 }
