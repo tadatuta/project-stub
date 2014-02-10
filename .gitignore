@@ -1,4 +1,4 @@
-libs/
+libs/bem*
 node_modules/
 .DS_Store
 .idea

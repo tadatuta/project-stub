@@ -1,0 +1,10 @@
+block img, default:{
+    var ctx = applyNext(),
+        data = this.data,
+        picDefault = 'img.png',
+
+    ctx.imageUrl = borschik.link(picDefault);
+    console.log(borschik.link(picDefault));
+
+    return applyCtx(ctx);
+}

@@ -9,6 +9,7 @@ exports.getConfig = function() {
 
         bundleBuildLevels: [
             environ.getLibPath('bem-core', 'common.blocks'),
+            environ.getLibPath('helpers', 'common.blocks'),
             'desktop.blocks',
             this.resolvePath('../../theme1.blocks')
         ]
